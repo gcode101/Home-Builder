@@ -7,12 +7,16 @@ import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import rootReducer from './reducers';
+import Photos from './components/Photos';
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(
 	<Provider store={store}>
-		<App />
+		<div>
+			<h1>Photos</h1>
+			<Photos />
+		</div>
 	</Provider>,
 	document.getElementById('root')
 );

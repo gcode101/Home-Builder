@@ -20,10 +20,10 @@ server.use(bodyParser.json());
 
 server.use(cors());
 
-server.get('api/photos/get', (req, res) => {
+server.get('/api/photos/get', (req, res) => {
 	res.send(photos);
 });
 
-server.listen(3000, () => {
-	console.log('Server running on port 3000');
+server.listen(5000, () => {
+	console.log('Server running on port 5000');
 });

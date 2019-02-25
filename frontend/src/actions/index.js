@@ -4,10 +4,10 @@ export const FETCHING_PHOTOS = 'FETCHING_PHOTOS';
 export const PHOTOS_FETCHED = 'PHOTOS_FETCHED';
 export const ERROR_FETCHING_PHOTOS = 'ERROR_FETCHING_PHOTOS';
 
-const url = 'http://localhost:3000';
+const url = 'http://localhost:5000';
 
 export const getPhotos = () => {
-	const photos = axios.get(`${url}/api/photos/get`);
+	const photos = axios.get('http://localhost:5000/api/photos/get');
 	return dispatch => {
 		dispatch({ type: FETCHING_PHOTOS });
 		photos
